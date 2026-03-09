@@ -1,10 +1,37 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
 body{
-    background: green;
-    text-align: center;
+    background: green;    
 }
-.mesa {
-    -ms-flex-align: center;
- text-align: center;
+
+.mesa{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+
+.poker-card{
+  width:200px;
+  height:300px;
+  font-size:40px;
+  border-radius:10px;
+}
+/* .palo-arriba{
+      font-size:50px;
+} */
+
+.palo-abajo{
+   transform: rotate(180deg);
+   /* font-size:50px; */
+}
+
+.valor-centro{
+  font-size:90px;
+}
+
+.card-header,
+.card-footer{
+  border:none !important;
 }
