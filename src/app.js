@@ -34,8 +34,22 @@ window.onload = function () {
     return { palo, valor, color };
   }
 
-  const carta = generarCarta();
-  console.log(carta);
+   generarCarta();
+
+  document.getElementById("nuevaCarta").addEventListener("click", generarCarta);
+
+setInterval(generarCarta, 10000);
+
+const carta = document.querySelector(".poker-card");
+
+document.getElementById("anchoCarta").addEventListener("input", function(){
+  carta.style.width = this.value + "px";
+});
+
+document.getElementById("altoCarta").addEventListener("input", function(){
+  carta.style.height = this.value + "px";
+});
+ 
 
 
 };
