@@ -1,37 +1,51 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
-body{
-    background: green;    
+body {
+  background: green;
 }
 
-.mesa{
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+.mesa {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
 }
 
 
-.poker-card{
-  width:200px;
-  height:300px;
-  font-size:40px;
-  border-radius:10px;
-}
-/* .palo-arriba{
-      font-size:50px;
-} */
-
-.palo-abajo{
-   transform: rotate(180deg);
-   /* font-size:50px; */
+.poker-card {
+  width: 200px;
+  height: 300px;
+  font-size: 40px;
+  border-radius: 10px;
 }
 
-.valor-centro{
-  font-size:90px;
+.palo-abajo {
+  transform: rotate(180deg);
+}
+
+.valor-centro {
+  font-size: 90px;
 }
 
 .card-header,
-.card-footer{
-  border:none !important;
+.card-footer {
+  border: none !important;
+}
+
+.controls label {
+  color: white;
+  font-weight: bold;
+}
+
+.controls input {
+  width: 80px;
+  text-align: center;
+}
+
+.timer {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
 }

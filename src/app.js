@@ -34,22 +34,35 @@ window.onload = function () {
     return { palo, valor, color };
   }
 
-   generarCarta();
+  generarCarta();
 
   document.getElementById("nuevaCarta").addEventListener("click", generarCarta);
 
-setInterval(generarCarta, 10000);
+  let tiempoRestante = 10;
+  const contador = document.getElementById("contador");
 
-const carta = document.querySelector(".poker-card");
+  setInterval(function () {
 
-document.getElementById("anchoCarta").addEventListener("input", function(){
-  carta.style.width = this.value + "px";
-});
+    tiempoRestante--;
+    contador.textContent = tiempoRestante;
 
-document.getElementById("altoCarta").addEventListener("input", function(){
-  carta.style.height = this.value + "px";
-});
- 
+    if (tiempoRestante === 0) {
+      generarCarta();
+      tiempoRestante = 10;
+    }
+
+  }, 1000);
+
+  const carta = document.querySelector(".poker-card");
+
+  document.getElementById("anchoCarta").addEventListener("input", function () {
+    carta.style.width = this.value + "px";
+  });
+
+  document.getElementById("altoCarta").addEventListener("input", function () {
+    carta.style.height = this.value + "px";
+  });
+
 
 
 };
